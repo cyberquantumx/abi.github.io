@@ -9,27 +9,35 @@ let proxies = [
     },
     {
         'url': 'tg://proxy?server=telegram.crocnet.ru&port=443&secret=eedb556b30e8aefc3443956f9a971bdcec74656c656772616d2e63726f636e65742e7275',
-        'name': "Crocnet"
+        'name': "Crocnet ★"
     },
     {
         'url': 'tg://proxy?server=telegram.crocnet.ru&port=443&secret=dddb556b30e8aefc3443956f9a971bdcec',
-        'name': "Crocnet Reserve"
+        'name': "Crocnet Reserve ★"
     },
     {
         'url': 'tg://proxy?server=92.53.65.32&port=443&secret=eedb556b30e8aefc3443956f9a971bdcec74656c656772616d2e63726f636e65742e7275',
-        'name': "Crocnet IP 1"
+        'name': "Crocnet IP 1 ★"
     },
     {
         'url': 'tg://proxy?server=92.53.65.32&port=443&secret=dddb556b30e8aefc3443956f9a971bdcec',
-        'name': "Crocnet IP 1 Reserve"
+        'name': "Crocnet IP 1 Reserve ★"
     },
     {
         'url': 'tg://proxy?server=95.213.143.212&port=443&secret=eedb556b30e8aefc3443956f9a971bdcec74656c656772616d2e63726f636e65742e7275',
-        'name': "Crocnet IP 2"
+        'name': "Crocnet IP 2 ★"
     },
     {
         'url': 'tg://proxy?server=92.53.65.32&port=443&secret=dddb556b30e8aefc3443956f9a971bdcec',
-        'name': "Crocnet IP 2 Reserve"
+        'name': "Crocnet IP 2 Reserve ★"
+    },
+    {
+        'url': 'tg://proxy?server=185.82.218.79&port=777&secret=a3d05b71dceb6a361a79a9fa7183d3e8',
+        'name': "Дед VPN 1"
+    },
+    {
+        'url': 'tg://proxy?server=185.119.58.137&port=52525&secret=dda3d05b71dceb6a361a79a9fa7183d3e8',
+        'name': "Дед VPN 2"
     },
     
 ]
@@ -42,6 +50,8 @@ window.onload = function() {
         ${proxies[i].name}
       </label><br>`;
     }
+    const f = document.querySelector('input[name="proxy"]');
+    f.setAttribute('checked', '');
 };
 
 function connect(){
