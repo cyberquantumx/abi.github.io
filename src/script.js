@@ -1,45 +1,9 @@
-let proxies = [{
-        'url': 'tg://proxy?server=pivo.shukafish.ru&port=5443&secret=ddf5199e949c0f23bc887581218ad8c1e6',
-        'name': 'Щука Whitelist'
-    },
-    {
-        'url': 'tg://proxy?server=slark.shukafish.ru&port=443&secret=ddf5199e949c0f23bc887581218ad8c1e6',
-        'name': 'Щука'
-    },
-    {
-        'url': 'tg://proxy?server=telegram.crocnet.ru&port=443&secret=eedb556b30e8aefc3443956f9a971bdcec74656c656772616d2e63726f636e65742e7275',
-        'name': 'Crocnet ★'
-    },
-    {
-        'url': 'tg://proxy?server=telegram.crocnet.ru&port=443&secret=dddb556b30e8aefc3443956f9a971bdcec',
-        'name': 'Crocnet Reserve ★'
-    },
-    {
-        'url': 'tg://proxy?server=92.53.65.32&port=443&secret=eedb556b30e8aefc3443956f9a971bdcec74656c656772616d2e63726f636e65742e7275',
-        'name': 'Crocnet IP 1 ★'
-    },
-    {
-        'url': 'tg://proxy?server=92.53.65.32&port=443&secret=dddb556b30e8aefc3443956f9a971bdcec',
-        'name': 'Crocnet IP 1 Reserve ★'
-    },
-    {
-        'url': 'tg://proxy?server=95.213.143.212&port=443&secret=eedb556b30e8aefc3443956f9a971bdcec74656c656772616d2e63726f636e65742e7275',
-        'name': 'Crocnet IP 2 ★'
-    },
-    {
-        'url': 'tg://proxy?server=92.53.65.32&port=443&secret=dddb556b30e8aefc3443956f9a971bdcec',
-        'name': 'Crocnet IP 2 Reserve ★'
-    },
-    {
-        'url': 'tg://proxy?server=185.82.218.79&port=777&secret=a3d05b71dceb6a361a79a9fa7183d3e8',
-        'name': 'Дед VPN 1'
-    },
-    {
-        'url': 'tg://proxy?server=185.119.58.137&port=52525&secret=dda3d05b71dceb6a361a79a9fa7183d3e8',
-        'name': 'Дед VPN 2'
-    }
-];
-window.addEventListener('load', () => {
+let proxies;
+
+window.addEventListener('load', async () => {
+    proxies = await loadProxiesFromFile();
+    console.log(proxies)
+
     const list = document.getElementById('proxies-list-form');
 
     if (!list) {
@@ -48,11 +12,13 @@ window.addEventListener('load', () => {
     }
 
     list.innerHTML = proxies.map((proxy, i) => `
-      <label>
-        <input type="radio" name="proxy" value="${i}" id="proxy-${i}">
-        ${proxy.name}
-      </label>
-    `).join('');
+  <label>
+    <input type="radio" name="proxy" value="${i}" id="proxy-${i}">
+    <span class="proxy-status ${proxy.status === 'online' ? 'status-online' : 'status-unknown'}"></span>
+    ${proxy.name} <a data-tooltip="${proxies[i].url}" class="has-tooltip">?</a>
+  </label>
+`).join('');
+
 
     document.querySelector('input[name="proxy"]').checked = true;
 });
@@ -147,13 +113,13 @@ const copyProxyUrl = () => {
 
 async function loadProxiesFromFile() {
     try {
-      const response = await fetch('./src/cats.txt');
-      if (!response.ok) throw new Error('Файл не найден');
-  
-      const text = await response.text();
-      console.log(text)
+        const response = await fetch('./src/cats.txt');
+        if (!response.ok) throw new Error('Файл не найден');
+        let p = await response.text();
+        return JSON.parse(p);
     } catch (error) {
-      console.error('Ошибка загрузки файла:', error);
-      alert('Не удалось загрузить файл с прокси');
+        console.error('Ошибка загрузки файла:', error);
+        alert('Не удалось загрузить файл с прокси');
+        return null;
     }
-  }
+}

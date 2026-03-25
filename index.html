@@ -61,6 +61,7 @@
 </head>
 
 <body>
+  <div class="noise-background"></div>
   <div class="">
     <h1>TG Proxy</h1>
     <div class="list" id="proxies-list">
@@ -68,25 +69,22 @@
         <p>- Proxy -</p>
       </form>
     </div>
-    <p>★ - рекомендованные</p>
     <button type="button" class="btn" id="btnConnect">Подключиться</button>
-    <button type="button" id="genQR" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Сгенерировать
-      QR</button>
-    <br>
-    <button type="button" class="btn" id="btnCopy" onclick="copyProxyUrl()">Скопировать URL</button>
+    <button type="button" id="genQR" class="btn" data-bs-toggle="modal" data-bs-target="#qrModal">QR</button>
+    <button type="button" class="btn" id="btnCopy" onclick="copyProxyUrl()">URL</button>
     <br><br>
     <a href="https://teletype.in/@morevpn/WindowsProxy">Инструкция</a></button>
-    <p>помощь: <a href="tg://msg_url?url=@chaingrai&text=Мне нужна помощь!">tg @chaingrai</a></p>
+    <p>помощь: <a href="https://t.me/chaingrai">tg @chaingrai</a></p>
 
   </div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">QR‑код для подключения</h1>
+          <h1 class="modal-title fs-5" id="qrModalLabel">QR‑код для подключения</h1>
           <div class="spinner-border text-success" id="loadQR" role="status">
             <span class="visually-hidden">Загрузка...</span>
           </div>

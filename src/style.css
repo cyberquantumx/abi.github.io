@@ -1,4 +1,3 @@
-
 * {
     margin: 8px;
     border: none;
@@ -8,40 +7,39 @@
     font-weight: 400;
     font-style: normal;
     font-size: large;
-  }
-  
-  body {
+}
+
+body {
     background-color: #121212;
-    color: #e400b3;
-  }
- 
-  .list {
+    color: #a7e400;
+}
+
+.list {
     margin-top: 20px;
-    width: 500px;
-    min-height: 500px;
+    width: 700px;
+    max-height: 500px;
     border: 2px solid #333;
     border-radius: 8px;
     background-color: #222;
-    padding: 15px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 5px;
-  }
-  
-  .list > * {
+}
+
+.list>* {
     color: #ffffff;
-  }
-  
-  #proxies-list-form > p {
+}
+
+#proxies-list-form>p {
     text-align: center;
     color: #888;
     font-size: 14px;
     margin-bottom: 10px;
-  }
-  
+}
 
-  input[type="radio"] {
+
+input[type="radio"] {
     width: 16px;
     height: 16px;
     margin: 5px 10px 5px 0;
@@ -49,52 +47,52 @@
     border: 2px solid #fff;
     border-radius: 50%;
     transition: all 0.3s ease;
-  }
-  
-  input[type="radio"]:checked {
-    background-color: #e400b3;
+}
+
+input[type="radio"]:checked {
+    background-color: #a7e400;
     box-shadow: 0 0 10px rgba(228, 0, 179, 0.5);
-  }
-  
-  label {
+}
+
+label {
     display: flex;
     align-items: center;
     cursor: pointer;
     color: #fff;
     font-size: 16px;
     user-select: none;
-  }
-  
-  label:hover {
-    color: #e400b3;
-  }
-  
+}
 
-  .btn {
+label:hover {
+    color: #a7e400;
+}
+
+
+.btn {
     background: none;
-    color: #e400b3;
-    border: 2px solid #e400b3;
+    color: #a7e400;
+    border: 2px solid #a7e400;
     padding: 10px 20px;
     margin-bottom: 10px;
     cursor: pointer;
     border-radius: 6px;
     font-size: 16px;
     transition: all 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #e400b3;
+}
+
+.btn:hover {
+    background-color: #a7e400;
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(228, 0, 179, 0.5);
-  }
-  
-  .btn:active {
+}
+
+.btn:active {
     transform: translateY(0);
     box-shadow: none;
-  }
-  
-  .modal {
+}
+
+.modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -103,11 +101,11 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
-    background-color: #222;
-    color: #fff;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    color: #000000;
     margin: 5% auto;
     padding: 30px;
     border-radius: 12px;
@@ -115,21 +113,21 @@
     max-width: 400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     text-align: center;
-  }
-  
-  .modal-header {
+}
+
+.modal-header {
     position: relative;
     padding: 20px 20px 10px;
     border-bottom: none;
-  }
-  
-  .modal-title {
-    color: #e400b3;
+}
+
+.modal-title {
+    color: #a7e400;
     font-size: 18px;
     margin-bottom: 5px;
-  }
-  
-  .btn-close {
+}
+
+.btn-close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -138,74 +136,212 @@
     font-size: 1.5rem;
     color: #aaa;
     opacity: 1;
-  }
-  
-  .btn-close:hover {
-    color: #e400b3;
+}
+
+.btn-close:hover {
+    color: #a7e400;
     opacity: 1;
-  }
-  
-  .modal-body {
+}
+
+.modal-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     min-height: 200px;
-  }
-  
+}
 
-  #qrCodeContainer {
+
+#qrCodeContainer {
     margin: 20px 0;
     display: flex;
     justify-content: center;
-  }
-  
-  #qrProxyName {
+}
+
+#qrProxyName {
     margin-top: 15px;
     font-style: italic;
     color: #666;
-  }
-  
-  #qr {
+}
+
+#qr {
     width: 240px;
     height: 240px;
-    border: 2px solid #333;
     border-radius: 8px;
 
-  }
-  
-  .spinner-border {
+}
+
+.spinner-border {
     height: 40px;
     width: 40px;
-    border-color: #e400b3 transparent transparent transparent;
-  }
- 
-  .logo {
+    border-color: #000000 transparent transparent transparent;
+}
+
+.logo {
     width: 100px;
     height: 100px;
-  }
-  
-  .modal-backdrop {
+}
+
+.modal-backdrop {
     display: none;
-  }
-  
-  p {
+}
+
+p {
     color: #888;
     font-size: 14px;
     margin-bottom: 10px;
-  }
-  
-  a {
-    color: #e400b3;
+}
+
+a {
+    color: #a7e400;
     text-decoration: none;
     transition: color 0.3s ease;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
+}
 
-  .btn-close {
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .list {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .proxy-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    body>div {
+        margin: 0;
+    }
+}
+
+
+.proxy-status {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-online {
+    background: #4CAF50;
+}
+
+.status-offline {
+    background: #F44336;
+}
+
+.status-unknown {
+    background: #f4e736;
+}
+
+.list {
+    margin-left: 0;
+}
+
+body>div>h1 {
+    margin: 0;
+}
+
+.noise-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./noise2.gif');
+    background-repeat: repeat;
+    margin: 0;
     filter: invert();
-  }
+    background-size: 100px;
+    /* сохраняет оригинальный размер тайла */
+    z-index: -1;
+    /* отправляет на задний план */
+    opacity: 0.05;
+    /* прозрачность 30 % */
+    pointer-events: none;
+    /* не перехватывает клики */
+}
+
+
+label,
+input[type="radio"] {
+    cursor: pointer;
+}
+
+/* Для WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #a7e400, #ff33cc);
+    border-radius: 8px;
+    border: 3px solid #0a0a0a;
+    box-shadow:
+        inset 0 0 8px rgba(228, 0, 179, 0.4),
+        inset 2px 2px 4px rgba(0, 0, 0, 0.6);
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff33cc, #a7e400);
+    box-shadow:
+        inset 0 0 12px rgba(228, 0, 179, 0.6),
+        inset 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+::-webkit-scrollbar-corner {
+    background: #12121200;
+}
+
+/* Для Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #a7e400 #121212;
+}
+
+
+.has-tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.has-tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    transform: translateX(-20%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 7px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 2222;
+}
+
+.has-tooltip:hover::after {
+    opacity: 1;
+}
