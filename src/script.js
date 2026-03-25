@@ -144,3 +144,16 @@ const copyProxyUrl = () => {
             alert('Не удалось скопировать. Попробуйте вручную.');
         });
 };
+
+async function loadProxiesFromFile() {
+    try {
+      const response = await fetch('./src/cats.txt');
+      if (!response.ok) throw new Error('Файл не найден');
+  
+      const text = await response.text();
+      console.log(text)
+    } catch (error) {
+      console.error('Ошибка загрузки файла:', error);
+      alert('Не удалось загрузить файл с прокси');
+    }
+  }
