@@ -264,13 +264,9 @@ body>div>h1 {
     margin: 0;
     filter: invert();
     background-size: 100px;
-    /* сохраняет оригинальный размер тайла */
     z-index: -1;
-    /* отправляет на задний план */
-    opacity: 0.05;
-    /* прозрачность 30 % */
+    opacity: 0.09;
     pointer-events: none;
-    /* не перехватывает клики */
 }
 
 
@@ -279,7 +275,6 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-/* Для WebKit (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
     width: 14px;
 }
@@ -312,7 +307,6 @@ input[type="radio"] {
     background: #12121200;
 }
 
-/* Для Firefox */
 * {
     scrollbar-width: thin;
     scrollbar-color: #a7e400 #121212;
