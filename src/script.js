@@ -15,7 +15,7 @@ window.addEventListener('load', async () => {
   <label>
     <input type="radio" name="proxy" value="${i}" id="proxy-${i}">
     <span class="proxy-status ${proxy.status === 'online' ? 'status-online' : 'status-unknown'}"></span>
-    ${proxy.name} <a data-tooltip="${proxies[i].url}" class="has-tooltip">?</a>
+    ${proxy.name} <a data-tooltip="${proxies[i].url}" class="has-tooltip">🔗</a>
   </label>
 `).join('');
 
