@@ -1,13 +1,8 @@
 [   
     {
-        "url": "tg://proxy?server=pivo.shukafish.ru&port=5443&secret=ddf5199e949c0f23bc887581218ad8c1e6",
-        "name": "Щука Whitelist",
-        "status": "unknown"
-    },
-    {
         "url": "tg://proxy?server=slark.shukafish.ru&port=443&secret=ddf5199e949c0f23bc887581218ad8c1e6",
         "name": "Щука",
-        "status": "unknown"
+        "status": "online"
     },
     {
         "url": "tg://proxy?server=telegram.crocnet.ru&port=443&secret=eedb556b30e8aefc3443956f9a971bdcec74656c656772616d2e63726f636e65742e7275",
@@ -49,6 +44,32 @@
         "name": "Дед VPN 2",
         "status": "unknown"
     },
+    {
+        "url": "tg://proxy?server=213.219.212.245&port=443&secret=9f3c7a8d2e4b1c6f5a7d8e9b0c2f4a1d",
+        "name": "Quatro VPN Proxy 1",
+        "status": "unknown"
+    },
+    {
+        "url":"tg://proxy?server=37.139.34.153&port=443&secret=9f3c7a8d2e4b1c6f5a7d8e9b0c2f4a1d",
+        "name":"Quatro VPN Proxy 2",
+        "status": "unknown"
+    },
+    {
+        "url": "tg://proxy?server=37.139.32.18&port=443&secret=9f3c7a8d2e4b1c6f5a7d8e9b0c2f4a1d",
+        "name":"Quatro VPN Proxy 3",
+        "status": "unknown"
+    },
+    {
+        "url": "tg://proxy?server=146.185.242.117&port=443&secret=9f3c7a8d2e4b1c6f5a7d8e9b0c2f4a1d",
+        "name": "Quatro VPN Proxy 4",
+        "status": "unknown"
+    },
+    {
+        "url": "tg://proxy?server=146.185.209.244&port=443&secret=9f3c7a8d2e4b1c6f5a7d8e9b0c2f4a1d",
+        "name": "Quatro VPN Proxy 5",
+        "status": "unknown
+    }
+    
     {
         "url": "tg://proxy?server=195.254.165.73&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQ",
         "name": "Прокси #1",
