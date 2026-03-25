@@ -67,7 +67,7 @@
     {
         "url": "tg://proxy?server=146.185.209.244&port=443&secret=9f3c7a8d2e4b1c6f5a7d8e9b0c2f4a1d",
         "name": "Quatro VPN Proxy 5",
-        "status": "unknown
+        "status": "unknown"
     }
     
     {
