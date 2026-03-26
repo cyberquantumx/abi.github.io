@@ -5,6 +5,11 @@
         "status": "online"
     },
     {
+        "url": "tg://proxy?server=ab.x5retail.org&port=443&secret=eee67e7cc2d997b34bc1cd2a4b8f3fc07e6c6b2e78352e7275",
+        "name": "x5",
+        "status": "unknown"
+    },
+    {
         "url": "tg://proxy?server=telegram.crocnet.ru&port=443&secret=eedb556b30e8aefc3443956f9a971bdcec74656c656772616d2e63726f636e65742e7275",
         "name": "Crocnet",
         "status": "online"
